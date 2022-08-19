@@ -8,7 +8,7 @@ Thie repo will contains all info related to MLE/AS interview
 
 2. Traditional ML knowledge
 
-   - [Knowledge review](#https://github.com/JingruGong1023/Machine_Learning/blob/main/ML_Review.md)
+   - [Knowledge review](https://github.com/JingruGong1023/Machine_Learning/blob/main/ML_Review.md)
 
    - [Practice Interview questions](https://github.com/JingruGong1023/Machine_Learning/blob/main/Data_Science_Interview_Questions.md)
 
