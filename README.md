@@ -44,7 +44,7 @@ Thie repo will contains all info related to MLE/AS interview
 
    - Leetcode
 
-   Pay attention to data structure would be enough. Use Python, Java, C++ whatever you want (of course don't think about sql)
+   Pay attention to data structure would be enough. Use Python, Java, C++ whatever you want 
 
    Links of  important questions from Leetcode
 
