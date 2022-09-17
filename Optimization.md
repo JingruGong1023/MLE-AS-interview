@@ -76,7 +76,7 @@ We do the following steps in **one epoch** for SGD:
 
 Since we are considering just one example at a time the cost will fluctuate over the training examples and it will **not** necessarily decrease. But in the long run, you will see the cost decreasing with fluctuations.
 
-<img src="../Machine_Learning/imgs/Screen Shot 2022-08-12 at 1.18.06 PM.png" alt="Screen Shot 2022-08-12 at 1.18.06 PM" height = "30%" width = "30%"/>
+<img src="imgs/Screen Shot 2022-09-16 at 10.46.39 PM.png" alt="Screen Shot 2022-09-16 at 10.46.39 PM" height = "30%" width = "30%"/>
 
 Also because the cost is so fluctuating, it **will never reach the minima** but it will keep dancing around it.
 
@@ -98,7 +98,7 @@ So, after creating the mini-batches of fixed size, we do the following steps in 
 
 Just like SGD, the average cost over the epochs in mini-batch gradient descent fluctuates because we are averaging a small number of examples at a time. 
 
-<img src="imgs/Screen Shot 2022-09-15 at 11.07.22 PM.png" alt="Screen Shot 2022-09-15 at 11.07.22 PM" height = "50%" width = "50%"/>
+<img src="../Machine_Learning/imgs/Screen Shot 2022-08-12 at 1.12.24 PM.png" alt="Screen Shot 2022-08-12 at 1.12.24 PM" height = "50%" width = "50%" />
 
 So, when we are using the mini-batch gradient descent we are updating our parameters frequently as well as we can use vectorized implementation for faster computations.
 
@@ -124,8 +124,6 @@ We do the following steps in **one epoch** for SGD:
 
 Since we are considering just one example at a time the cost will fluctuate over the training examples and it will **not** necessarily decrease. But in the long run, you will see the cost decreasing with fluctuations.
 
-<img src="../Deep_Learning/NLP/image/Screen Shot 2022-08-12 at 1.18.06 PM.png" alt="Screen Shot 2022-08-12 at 1.18.06 PM" height = "50%" width = "30%" />
-
 Also because the cost is so fluctuating, it **will never reach the minima** but it will keep dancing around it.
 
 SGD can be used for **larger datasets**. It converges faster when the dataset is large as it causes updates to the parameters more frequently.
@@ -146,6 +144,6 @@ So, after creating the mini-batches of fixed size, we do the following steps in 
 
 Just like SGD, the average cost over the epochs in mini-batch gradient descent fluctuates because we are averaging a small number of examples at a time. 
 
-<img src="../Deep_Learning/NLP/image/Screen Shot 2022-08-12 at 1.22.14 PM.png" alt="Screen Shot 2022-08-12 at 1.22.14 PM" height = "30%" width = "30%" />
+<img src="imgs/Screen Shot 2022-09-16 at 10.48.46 PM.png" alt="Screen Shot 2022-09-16 at 10.48.46 PM" height = "30%" width = "30%" />
 
 So, when we are using the mini-batch gradient descent we are updating our parameters frequently as well as we can use vectorized implementation for faster computations.
