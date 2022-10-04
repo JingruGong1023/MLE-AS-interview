@@ -16,7 +16,8 @@ Thie repo will contains all info related to MLE/AS interview
    - [cheatsheet](https://github.com/JingruGong1023/MLE-AS-interview/blob/main/Data_Science_Cheatsheet.pdf)
    
 3. DL knowledge
-   - [interview question lists](https://github.com/JingruGong1023/MLE-AS-interview/blob/main/Optimization.md)
+   - [Optimization](https://github.com/JingruGong1023/MLE-AS-interview/blob/main/Optimization.md)
+   - [DL interview questions](https://github.com/JingruGong1023/MLE-AS-interview/blob/main/ML_Interview_Questions.md)
 
 4. Recommendation System
 
