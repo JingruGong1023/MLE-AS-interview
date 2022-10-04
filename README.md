@@ -14,8 +14,11 @@ Thie repo will contains all info related to MLE/AS interview
 
    - [一些地里的八股文](https://www.1point3acres.com/bbs/thread-713903-1-1.html)
    - [cheatsheet](https://github.com/JingruGong1023/MLE-AS-interview/blob/main/Data_Science_Cheatsheet.pdf)
+   
+3. DL knowledge
+   - [interview question lists](https://github.com/JingruGong1023/MLE-AS-interview/blob/main/Optimization.md)
 
-3. Recommendation System
+4. Recommendation System
 
    问的题，目前来看分两种
    1.经典题：比如。设计一个推荐系统，
@@ -26,7 +29,7 @@ Thie repo will contains all info related to MLE/AS interview
 
    - [get an overview](https://towardsdatascience.com/recommender-systems-the-most-valuable-application-of-machine-learning-part-1-f96ecbc4b7f5)
 
-4. Deep Learning
+5. Deep Learning
    - [Knowledge Review](https://github.com/JingruGong1023/Deep_Learning)
    - [Stanford Class cheatsheets](https://stanford.edu/~shervine/teaching/cs-230/)
    - 然后下边几个是一位大佬做的embedding，transformer，GPT2， BERT的visualization，解释的非常好。应该也是花了非常多的时间. 有兴趣可以读一读。
@@ -41,7 +44,7 @@ Thie repo will contains all info related to MLE/AS interview
      https://arxiv.org/abs/1706.03762
      https://arxiv.org/abs/1810.04805
 
-5. Coding
+6. Coding
 
    - Leetcode
 
