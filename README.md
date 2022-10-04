@@ -13,6 +13,7 @@ Thie repo will contains all info related to MLE/AS interview
    - [Practice Interview questions](https://github.com/JingruGong1023/Machine_Learning/blob/main/Data_Science_Interview_Questions.md)
 
    - [一些地里的八股文](https://www.1point3acres.com/bbs/thread-713903-1-1.html)
+   - [cheatsheet](https://github.com/JingruGong1023/MLE-AS-interview/blob/main/Data_Science_Cheatsheet.pdf)
 
 3. Recommendation System
 
