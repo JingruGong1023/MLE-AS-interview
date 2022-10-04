@@ -110,17 +110,27 @@
 
 3. **What is L2 Regression assumption**
 
+   L2-regularization relies on the assumption that a model with small weights is simpler than a model with large weights. Thus, by penalizing the square values of the weights in the cost function you drive all the weights to smaller values. 
+
 4. **Will Linear regression with L1 regularization be affected by multi-linearity?**
 
    No
 
 5. **What is L1 Regression, what's the difference with L2**
 
-6. **If we want to reduce number of features , which one to choose, L1,L2 and Why?**
+   instead of adding squared w, we add absolute value of w in the equation
 
-   Lasso
+6. **How does L2 optimize model**
 
-7. **What is ElasticNet, and how is it related to Lasso and Ridge?**
+   The idea here is that we're decreasing the "slope" along each of the feature **by pushing the coefficients towards zero**. -> minimize weights, this prevents model from overfitting
+
+7. **If we want to reduce number of features , which one to choose, L1,L2 and Why?**
+
+   Lasso(L1) 
+
+   L1 tends to shrink coefficients to zero, whereas L2 tends to shrink coefficients evenly. So when we want to drop features or do feature selection, we use **L1 instead of L2**
+
+8. **What is ElasticNet, and how is it related to Lasso and Ridge?**
 
 ​	L2 helps generalization, L1 helps makes some features' weights to zero
 
@@ -158,6 +168,8 @@
 
 11. **What is Logistic Regression, pro and cons?**
 
+    LR is a supervised machine learning algorithm that can be used to model the probability of a certain data points belong to certain class or event , and usually used for binary classification, also the data should be linear separable.
+
 12. **Why not use MSE in Logistic?**
 
 13. **MLE assumes data follow which distribution**
@@ -177,6 +189,10 @@
     The risk of over fitting is less on SVM 
 
 17. **What is KNN and how it's working?**
+
+    a supervised , non-parametric method that calculates y_hat using the average value or most common class of its k-nearest points
+
+    dimension reduction should be applied before knn
 
 18. **Does KNN has any assumption for the data distribution?** No
 
@@ -202,13 +218,9 @@
 
 19. **What's the difference between K-means and KNN?**
 
-​		KNN represents a supervised classification algorithm that will give new data points accordingly to the k number or the 			closest data points, while k-means clustering is an unsupervised clustering algorithm that gathers and groups data into k number of clusters.
+​		KNN represents a supervised classification algorithm that will give new data points accordingly to the k number or the closest data points, while k-means clustering is an unsupervised clustering algorithm that gathers and groups data into k number of clusters.
 
-20. **How to choose K value in KNN**
-
-​		small k: complicate model, overfitting
-
-​		Large k: simple model, underfitting
+20. 
 
 </br>
 
@@ -226,11 +238,23 @@
 
 3. **What's the problem with DT?**
 
+   Overfitting
+
 4. **Is DT linear or nonlinear**
+
+   non linear
 
 5. **What is ensemble Learning and what types are there?**
 
+   · `Bagging` involves fitting many decision trees on different samples of the same dataset and averaging the predictions.
+
+   · `Stacking` involves fitting many different models types on the same data and using another model to learn how to best combine the predictions
+
+   · `Boosting` is an iterative strategy for adjusting an observations’ weight based on their previous classification-> **building strong learner from weaker learners**
+
 6. **What is bootstrap, and how it works**
+
+   sampling with replacement
 
 7. **Which versions of trees can deal with both categorical variable and missing? which versions can only deal with missing**
 
@@ -248,6 +272,8 @@
    $information \ gain = entropy \ before \ splitting \ - \  entropy \ after \ splitting $
 
 10. **What is Gini index, how does it work?**
+
+    find the **best feature** and the **best threshold** to **minimize impurity**
 
     gini index = 1- sum(p^2), p is the probability of each class
 
@@ -299,7 +325,7 @@
     1. each tree is trained with random sample of the data
     2. each tree is trained with a subset of features
 
-24. **How does random forest acieves model independend**
+24. **How does random forest acieves model independence**
 
 25. **What does proximity means in RF?**
 
@@ -321,11 +347,15 @@
 
 29. **What is Boosting, and what are the common algorithms using boosting**
 
+    All boosting models iteratively try to improve a model built up from **weak learners**.
+
 30. **What is Gradient Boosting , and how it works**
 
 31. **Compare Gradient Boosting with Adaboosting**
 
 32. **What are the advantages and disadvantages of GBDT**
+
+    slow to train but fast to predict,more accurate than RF
 
 33. **How to tune GBDT**
 
@@ -343,7 +373,11 @@
 
 36. **What is XGBoost**
 
+    a decision-tree-based ensemble Machine Learning algorithm that uses a [gradient boosting](https://en.wikipedia.org/wiki/Gradient_boosting) framework
+
 37. **When do you want to use Trees instead of Linear Models**
+
+    non linear model
 
 38. **How trees are pruned?**
 
@@ -369,7 +403,15 @@ https://medium.com/analytics-vidhya/post-pruning-and-pre-pruning-in-decision-tre
 
 31. **Do CatBoost, LightGBM and xgBoost need feature encoding?**
 
+    only xgboost need feature encoding
+
 32. **How do CatBoost, LightGBM and xgBoost deal with missing values**
+
+    **CatBoost**: three mode: forbidden, min, max (does not need to deal with categorical feature)
+
+    **Lightgbm**: uses NA (NaN) to represent missing values by default
+
+    **xgBoost**:  it creates a third branch as well for missing values and will automatically learn which direction to go when a value is missing
 
 
 
@@ -379,47 +421,93 @@ https://medium.com/analytics-vidhya/post-pruning-and-pre-pruning-in-decision-tre
 
 1. **What are the common metrics for Binary Classification**
 
+   precision, recall, auc
+
 2. **What does Precision and recall mean? why do we need F1 score?**
+
+   **precision** = of all the predicted positive samples, how many of them are truly positive
+
+   **Recall** = of all the real positive samples, how many of them our model predicted to be positive. = TPR
+
+   **F1 Score** is the trade off between precision and recall
 
 3. **What is Precision-Recall curve, which point is the best**
 
-4. **What is ROC, AUC, which point is the best**
+   Trade-off between precision and recall, recall on the x axis, precision on the y axis. The best point is at the top right
 
-5. **Threshold based method**
+   it considers one threshold at a time
+
+4. **When should we use precision, recall ?**
+
+   precision helps when the false positive cost is high (movie recommendation)
+
+   recall helps when the false negative cost is high (cancer detection)
+
+5. **What is ROC, AUC, which point is the best**
+
+   False positive rate on the x axis, True positive rate on the y axis
+
+   the best point is on the top left
+
+   - AUC is a ranking metric, it takes all possible thresholds into account, which means that it's **independent of the default thresholds**
+
+6. **Threshold based method**
 
    Accuracy, precision, recall, f1
 
-6. **What are the common metrics for multi-class classification**
+7. **What are the common metrics for multi-class classification**
 
-7. **Averaging strategies in metrics for Multi-class classification**
+   confusion matrix
+
+8. **Averaging strategies in metrics for Multi-class classification**
 
    Macro, micro, weighted
 
-8. **Ranking based method**
+9. **Ranking based method**
 
    ROC AUC
 
-9. **What are the common metrics for regression**
+10. **What are the common metrics for regression**
 
-10. **What is imbalanced data, and what  are the two sources of them**
+    MSE, MAE , SSE, RMSE
 
-11. **Two basic approaches in dealing with imbalanced data**
+11. **What is imbalanced data, and what  are the two sources of them**
 
-12. **what is SMOTE**
+12. **Two basic approaches in dealing with imbalanced data**
 
-13. **How cross-validation works**
+13. **what is SMOTE**
 
-14. **What is bias , what does it mean to have high bias**
+14. **How cross-validation works**
 
-15. **What is variance ,  what does it mean to have high variance**
+15. **What is bias , what does it mean to have high bias**
 
-16. **What is bayesian error**
+    the amount that a model's prediction differs from the target value
 
-17. **what is the total error of a model**
+    high bias-> underfitting -> bad performance in training data
 
-18. **How to trade off variance and bias**
+16. **What is variance ,  what does it mean to have high variance**
 
-19. **How to calculate the feature importance separately in Regressions and CART**
+    how spread out the data is
+
+    high variance -> overfitting -> bad at generalization 
+
+17. **What is bayesian error**
+
+    bayes error rate *is the lowest possible error rate for any classifier of a random outcome* and is analogous to the **irreducible error**
+
+18. **what is the total error of a model**
+
+    $bias^2+\ Variance \ + \ irreducible \ error$
+
+19. **How to trade off variance and bias**
+
+    in all cases, variance decreases, bias increases, we need to find the trade-off to minimize the error
+
+20. **How to calculate the feature importance separately in Regressions and CART**
+
+    CART: ranks variables by their ability to minimize impurity, averages across all trees
+
+    
 
 </br>
 
@@ -438,6 +526,8 @@ https://medium.com/analytics-vidhya/post-pruning-and-pre-pruning-in-decision-tre
    Repeat: assign each point from training to each cluster that is closest to it in mean, recalculate the mean of each cluster
 
    If all clusters’ mean stop changing, algorithm stops
+
+   K-mode used for categorical data
 
 2. **What are K-means' Pros and Cons**
 
@@ -473,37 +563,81 @@ https://medium.com/analytics-vidhya/post-pruning-and-pre-pruning-in-decision-tre
 
    data compression, speeds up learning algorithm and visualizing data
 
+   Goal: minimize info loss, increase the interpretability in lower dimension, preserve data structure
+
 2. **What do we need PCA and what does it do? **
+
+   Project data onto orthogonal vectors that maximize variance
 
    PCA tries to find a lower dimensional surface project , such that the sum of the squared projection error is minimized
 
 3. **What is the difference between logistic regression and PCA?**
 
-4. **What are the two pre-processing steps that should be applied before doing PCA?**
+4. **What is the drawback in PCA**
+
+    Outliers
+
+5. **how do we know the dimensions of the data with principle components**
+
+    k- dimensional = k principle component
+
+6. **How are the principle components ranked **
+
+    pc are ranked by the proportion of variance explained by $ \frac{\lambda_i}{\sum \lambda} $
+
+7. **What is the eigenvector in PCA**
+
+    in PCA, the eigenvectors are uncorrelated and represents principle components
+
+8. **What are the two pre-processing steps that should be applied before doing PCA?**
 
     mean normalization and feature scaling
 
-5. **If we want only the 90% varaince, how to choose PC**
+9. **If we want only the 90% varaince, how to choose PC**
 
-6. **PCA calculation details**
+10. **PCA calculation details**
 
     https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues
 
-7. **What if after pca, we still left with 300 dimensions**
+11. **What if after pca, we still left with 300 dimensions**
 
-    two reasons:
+     two reasons:
 
-    1. The pca does not work:
+     1. The pca does not work:
 
-       that means your features either have non-linear relationships or no relationships at all. go ahead choosing other kernel methods, such as t-SNE
+        that means your features either have non-linear relationships or no relationships at all. go ahead choosing other kernel methods, such as t-SNE
 
-       or you forgot to normalize your data..
+        or you forgot to normalize your data..
 
-    2. pca works, any reduction is good, we cann't remove too much dimensions because we will lose lots of information. 
+     2. pca works, any reduction is good, we can't remove too much dimensions because we will lose lots of information. 
 
-8. **Other than PCA, what else methods do you know for dimensionality reduction**
+12. **Other than PCA, what else methods do you know for dimensionality reduction**
 
-    T-SNE
+     T-SNE
+
+13. **What is T- SNE**
+
+     Focus on keeping very similar data close 
+
+     
+
+14. **How does T-SNE preserve local structure** 
+
+     **using student t-distribution** to compute the similarity between two points in lower-dimensional space.
+
+15. **Why does t-sne uses t distribution to compute the similarity in lower dimensional space**
+
+     because t-distribution creates the probability distribution of points in lowers dimensional space, reduce the crowd issue
+
+16. 
+
+17. 
+
+18. 
+
+19. 
+
+20. 
 
 </br>
 

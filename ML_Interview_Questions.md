@@ -413,17 +413,35 @@
 
     Hidden state: read/output some content from the cell
 
-30. 
+30. **What is the difference between GRU and LSTM**
 
-31. 
+    The Gated Recurrent Unit (GRU) is a type of Recurrent Neural Network (RNN) that, in certain cases, has advantages over long short term memory (LSTM). **GRU uses less memory and is faster than LSTM**,
 
-32. 
+     however, LSTM is **more accurate** when using datasets with longer sequences.
 
-33. 
+    GRU does not possess any internal memory, they don’t have an output gate that is present in LSTM
 
-34. 
+31. **What is Attention model**
 
-35. 
+    unlike traditional sequence model, usually decreases the accuracy with longer sentences input, attention model is the sequence model that we take into account of some nearby words in the sentence
+
+32. **What kind of RNN used in attention model**
+
+    Bidirectional
+
+33. **What's wrong with traditional sequence model comparing to attention model**
+
+    the normal sequence model only use a fixed-length context vector to explain a word, but it often forgot the earlier part of the sequence once it has processed the entire sequence
+
+34. **How does attention model work**
+
+    We calculate the alpha , the amount of attention we should pay to , for each word in the sentence
+
+    And we do this for every word in the sentence
+
+35. **How do we calculate alpha**
+
+    use a softmax(because we want to use it as weights, so they should sum to 1), with $e^{t,t'}$, which can be learned by a small rnn with previous stage of input and activation as inputs
 
 36. 
 
